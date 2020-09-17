@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/home/home",
+    "pages/article/article"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#292a38",
+    "backgroundColor":"#292a38",
+    "navigationBarTitleText": "文章",
+    "navigationBarTextStyle": "white",
+    "onReachBottomDistance":100
+  },
+  "usingComponents": {
+    "towxml":"/towxml/towxml",
+    "van-button": "vant/dist/button/index",
+    "van-search": "vant/dist/search/index",
+    "van-goods-action": "vant/dist/goods-action/index",
+    "van-goods-action-icon": "vant/dist/goods-action-icon/index",
+    "van-loading":"vant/dist/loading/index"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

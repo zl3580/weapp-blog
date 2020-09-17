@@ -1,0 +1,31 @@
+<!--pages/home/home.wxml-->
+<view class="global-container">
+  <view class="global-loading-view" wx:if="{{loading}}">
+    <van-loading type="spinner" color="#1989fa" />
+  </view>
+  <view wx:else>
+    <view class="card-article" wx:for="{{articleData}}" wx:key="item">
+      <view>
+        <view class="article-title">{{item.title}}</view>
+        <view class="article-content" id="{{item.id}}" catchtap="handleContent">
+          <towxml nodes="{{item.content}}"></towxml>
+        </view>
+      </view>
+      <view class="action-wrap">
+        <van-button icon="like-o" custom-class="like-button" />
+        <text class="like-num">{{item.pageview}}</text>
+      </view>
+    </view>
+    <view wx:if="{{isAll}}">
+      <view class="up-loading-tip">已经到底啦~</view>
+    </view>
+    <view wx:else>
+      <view class="up-loading-icon" wx:if="{{loadingAgain}}">
+        <van-loading/>
+      </view>
+      <view class="up-loading-tip" wx:else>上拉刷新</view>
+    </view>
+
+  </view>
+
+</view>

@@ -1,0 +1,61 @@
+/* pages/home/home.wxss */
+
+.search-input{
+    
+    border-radius: 3pt;
+    box-shadow: "rgba(52, 56, 72, 0.8)";
+    background-image: linear-gradient(-90deg, #00e1ebf5, #292a38);
+}
+.card-article{
+  box-shadow: inset 1px -1px 4px 0px #5b5e7d26, 1px -1px 14px 0px #141633;
+  border-radius: 10pt;
+  color:#9E9E9E;
+  padding:5pt;
+  margin-bottom: 20pt;
+}
+.article-title{
+font-weight: 900;
+line-height: 20pt;
+color: #eaebf1;
+padding-left: 5pt;
+}
+.article-content{
+  height: 100pt;
+  overflow-y: hidden;
+  padding-bottom: 10pt;
+}
+.action-wrap{
+height: 30pt;
+text-align: right;
+background:#292a38;
+border-radius: 3pt;
+position: relative;
+}
+.van-button--default.like-button{
+  background: transparent !important;
+    border-color: transparent !important;
+    color: #d6c1c1;
+    width: 50pt;
+}
+.like-num{
+  min-width: 8pt;
+    padding: 0 3pt;
+ font-size: 8pt;
+ position: absolute;
+ right: 9pt;
+ top: 5pt;
+ background: #960aee;
+ border-radius: 8pt;
+ color: #fff;
+ text-align: center;
+}
+.up-loading-icon{
+  text-align: center;
+  height: 40pt;
+}
+.up-loading-tip{
+  height: 40pt;
+  text-align: center;
+  color: #eaebf1;
+}
+

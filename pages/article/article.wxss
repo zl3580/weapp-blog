@@ -1,0 +1,9 @@
+/* pages/article.wxss */
+.article-title{
+  padding: 10pt;
+color: aliceblue;
+font-weight: 600;
+}
+.article-wrap{
+  padding-bottom: 50pt;
+}

@@ -1,0 +1,10 @@
+<!--pages/article.wxml-->
+<view >
+  <view  class="global-loading-view" wx:if="{{loading}}">
+    <van-loading type="spinner" color="#1989fa" />
+  </view>
+  <view wx:else class="article-wrap">
+  <view class="article-title">{{title}}</view>
+  <towxml nodes="{{content}}"></towxml>
+  </view>
+</view>
