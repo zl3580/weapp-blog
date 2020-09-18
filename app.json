@@ -9,9 +9,9 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#292a38",
     "backgroundColor":"#292a38",
-    "navigationBarTitleText": "文章",
     "navigationBarTextStyle": "white",
-    "onReachBottomDistance":100
+    "onReachBottomDistance":100,
+    "navigationBarTitleText": "文章"
   },
   "usingComponents": {
     "towxml":"/towxml/towxml",

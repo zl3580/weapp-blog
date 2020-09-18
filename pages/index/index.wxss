@@ -1,23 +1,229 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/**index.wxss    
+left:-100pt   ______100pt  (左右)
+top:300pt    ______200pt   (上下)
+**/
+.container {
+  position: relative;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.entry-button-wrap {
+  position: absolute;
+  bottom: 100pt;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.entry-button {
+  width: 100pt !important;
+  background: #292a38 !important;
+  border-top: 1px solid #4d4d5f !important;
+  border-left: 1px solid #4d4d5f !important;
+  border-right: 1px solid #292a38 !important;
+  border-bottom: 1px solid #292a38 !important;
+  box-shadow: -2px -3px 8px 0px #41415a, 5px 4px 6px 0px #060505;
+  border-radius: 5pt !important;
+  color: aliceblue !important;
 }
 
-.usermotto {
-  margin-top: 200px;
+.gravity-info {
+  color: honeydew;
 }
 
+.ball-first {
+  z-index: 100;
+  width: 50pt;
+  height: 50pt;
+  border-radius: 50pt;
+  background: blueviolet;
+  text-align: center;
+  line-height: 50pt;
+  font-weight: 700;
+  color: honeydew;
+  /* animation: firstmove 3s ease forwards; */
+  position: absolute;
+  left: 20pt;
+  bottom: 100pt;
+}
 
+@keyframes firstmove {
+  from {
+    left: 20pt;
+    bottom: 1000pt;
+  }
+
+  to {
+    left: 10pt;
+    bottom: 0pt;
+  }
+}
+
+.ball-second {
+  z-index: 100;
+  width: 40pt;
+  height: 40pt;
+  border-radius: 40pt;
+  background: #ef7a82;
+  text-align: center;
+  line-height: 40pt;
+  font-weight: 700;
+  /* animation: secondmove 3s ease forwards; */
+  position: absolute;
+  animation-delay: 1s;
+  left: 60pt;
+  bottom: 1000pt;
+}
+
+@keyframes secondmove {
+  from {
+    left: 60pt;
+    bottom: 1000pt;
+  }
+
+  to {
+    left: 60pt;
+    bottom: 20pt;
+  }
+}
+
+.ball-three {
+  z-index: 100;
+  width: 30pt;
+  height: 30pt;
+  border-radius: 30pt;
+  background: #057748;
+  text-align: center;
+  line-height: 30pt;
+  font-weight: 700;
+  /* animation: threemove 3s ease forwards; */
+  position: absolute;
+  left: 100pt;
+  bottom: 1000pt;
+  animation-delay: 2s;
+}
+
+@keyframes threemove {
+  from {
+    left:100pt;
+    bottom: 1000pt;
+  }
+
+  to {
+    left: 100pt;
+    bottom: 10pt;
+  }
+}
+
+.ball-forth {
+  z-index: 100;
+  width: 25pt;
+  height: 25pt;
+  border-radius: 25pt;
+  background: #44cef6;
+  text-align: center;
+  line-height: 25pt;
+  font-weight: 700;
+  color: green;
+  /* animation: forthmove 3s ease forwards; */
+  position: absolute;
+  
+  animation-delay: 3s;
+  left: 100pt;
+  bottom: 1000pt;
+}
+
+@keyframes forthmove {
+  from {
+    left: 100pt;
+    bottom: 1000pt;
+  }
+
+  to {
+    left: 130pt;
+    bottom: 40pt;
+  }
+}
+
+.ball-five {
+  z-index: 100;
+  width: 40pt;
+  height: 40pt;
+  border-radius: 40pt;
+  background: #065279;
+  text-align: center;
+  line-height: 40pt;
+  font-weight: 700;
+  color: #292a38;
+  /* animation: fivemove 3s ease forwards; */
+  position: absolute;
+  animation-delay: 4s;
+  left: 200pt;
+  bottom: 1000pt;
+}
+
+@keyframes fivemove {
+  from {
+    left: 200pt;
+    bottom: 1000pt;
+  }
+
+  to {
+    left: 150pt;
+    bottom: 10pt;
+  }
+}
+
+.ball-six {
+  z-index: 100;
+  width: 50pt;
+  height: 50pt;
+  border-radius: 50pt;
+  background: #725e82;
+  text-align: center;
+  line-height: 50pt;
+  font-weight: 700;
+  color: #292a38;
+  /* animation: sixmove 3s ease forwards; */
+  position: absolute;
+  animation-delay: 5s;
+  left: 20pt;
+  bottom: 1000pt;
+}
+
+@keyframes sixmove {
+  from {
+    left: 20pt;
+    bottom: 1000pt;
+  }
+
+  to {
+    left: 190pt;
+    bottom: 0pt;
+  }
+}
+
+.ball-seven {
+  z-index: 100;
+  width: 30pt;
+  height: 30pt;
+  border-radius: 30pt;
+  background: #50616d;
+  text-align: center;
+  line-height: 30pt;
+  font-weight: 700;
+  color: #292a38;
+  /* animation: sevenmove 3s ease forwards; */
+  position: absolute;
+  animation-delay: 6s;
+  left: 0pt;
+    bottom: 1000pt;
+}
+
+@keyframes sevenmove {
+  from {
+    left: 0pt;
+    bottom: 1000pt;
+  }
+
+  to {
+    left: 240pt;
+    bottom: 5pt;
+  }
+}
