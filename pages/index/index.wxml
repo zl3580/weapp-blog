@@ -1,15 +1,19 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="gravity-info">
-   <view class="ball-first" style="bottom:{{bottom}}pt">写</view>
-   <view class="ball-second">代</view>
-   <view class="ball-three">码</view>
-   <view class="ball-forth">的</view>
-   <view class="ball-five">小</view>
-   <view class="ball-six">胖</view>
-   <view class="ball-seven">墩</view>
+  <!-- <view class="gravity-info">
+   <view class="ball-first" style="bottom:{{bottom}}rpx;left:{{leftFirst}}rpx;transform:rotate({{leftFirst}}deg)">写</view>
+   <view class="ball-second"  style="bottom:{{bottom}}rpx;left:{{leftSecond}}rpx;transform:rotate({{leftSecond}}deg)">代</view> 
+   <view class="ball-three"  style="bottom:{{bottom}}rpx;left:{{leftThree}}rpx;transform:rotate({{leftThree}}deg)">码</view>
+   <view class="ball-forth"  style="bottom:{{bottom}}rpx;left:{{leftForth}}rpx;transform:rotate({{leftForth}}deg)">的</view>
+   <view class="ball-five"  style="bottom:{{bottom}}rpx;left:{{leftFive}}rpx;transform:rotate({{leftFive}}deg)">小</view>
+   <view class="ball-six"  style="bottom:{{bottom}}rpx;left:{{leftSix}}rpx;transform:rotate({{leftSix}}deg)">胖</view>
+   <view class="ball-seven"  style="bottom:{{bottom}}rpx;left:{{leftSeven}}rpx;transform:rotate({{leftSeven}}deg)">墩</view>
+  </view> -->
+  <view class="container">
+      <canvas type="2d" style="width:100vw;height:100vh;" id="canvas"></canvas>
   </view>
-  <view class="entry-button-wrap"> 
+
+  <view class="entry-button-wrap">
     <van-button type="default" custom-class="entry-button" bind:click="bindViewTap">点击进入</van-button>
   </view>
 </view>
