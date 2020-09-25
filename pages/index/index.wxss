@@ -6,6 +6,185 @@ top:300pt    ______200pt   (上下)
   position: relative;
   width: 100%;
 }
+.canvas-wrap{
+  position:absolute;
+  top:10px;
+  z-index:100
+}
+.containerBgcolor1 {
+  width: 200rpx;
+  height: 400rpx;
+  border-radius: 25rpx;
+  border: 1px dashed #44cef6;
+  position: relative;
+  left: -23px;
+  top: 407px;
+}
+
+.containerBgcolor2 {
+  width: 1px;
+  height: 1px;
+  border: 10px solid #44cef6;
+  background-color: #44cef6;
+  position: relative;
+  left: 100px;
+  top: 20px;
+  display: inline-block;
+}
+
+.containerBgcolor3 {
+  width: 50px;
+  height: 50px;
+  border: 1px dashed #44cef6;
+  border-radius: 50px;
+  position: relative;
+  left: -145px;
+  top: 184px;
+  display: inline-block;
+}
+
+/* 正三角 */
+.containerBgcolor4 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 60px solid #44cef6;
+  position: relative;
+  left: 100px;
+  top: 100px;
+  display: inline-block;
+}
+
+/* 倒三角 */
+.containerBgcolor5 {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 60px solid #44cef6;
+  left: -100px;
+  top: 200px;
+  display: inline-block;
+}
+
+/* 六角星 */
+.containerBgcolor6 {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #44cef6;
+  position: relative;
+  left: 162px;
+  top: 200px;
+  display: inline-block;
+}
+
+.containerBgcolor6:after {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid #44cef6;
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: -50px;
+}
+
+/* 五角星 */
+.containerBgcolor7 {
+  margin: 50px 0;
+  display: block;
+  color: #44cef6;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid #44cef6;
+  border-left: 100px solid transparent;
+  transform: rotate(35deg);
+  /* background-color: #44cef6; */
+  position: relative;
+  left: -101px;
+  top: -446px;
+  display: inline-block;
+}
+
+.containerBgcolor7:before {
+  border-bottom: 80px solid #44cef6;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  content: '';
+  transform: rotate(-35deg);
+}
+
+.containerBgcolor7:after {
+  position: absolute;
+  display: block;
+  color: #44cef6;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid #44cef6;
+  border-left: 100px solid transparent;
+  transform: rotate(-70deg);
+  content: '';
+}
+
+.containerBgcolor8 {
+  width: 54px;
+  box-sizing: content-box;
+  border-width: 50px 18px 0;
+  border-style: solid;
+  border-color: #44cef6 transparent;
+  position: relative;
+  left: -84px;
+  top: 91px;
+  display: inline-block;
+}
+
+.containerBgcolor8:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -85px;
+  left: -18px;
+  border-width: 0 45px 35px;
+  border-style: solid;
+  border-color: transparent transparent #44cef6;
+}
+
+.containerBgcolor9 {
+  width: 43px;
+  height: 146px;
+  border: 1px dashed #44cef6;
+  position: relative;
+  left: 90px;
+  top: 0px;
+  display: inline-block;
+}
+
+.containerBgcolor10 {
+  width: 8px;
+  height: 12px;
+  border-radius: 4px;
+  background-color: #44cef6;
+  position: relative;
+  left: -100px;
+  top: -185px;
+  display: inline-block;
+  box-shadow: 1px 1px 3px 3px #44cef6;
+}
 
 .entry-button-wrap {
   position: absolute;
@@ -15,10 +194,10 @@ top:300pt    ______200pt   (上下)
 .entry-button {
   width: 100pt !important;
   background: #292a38 !important;
-  border-top: 1px solid #4d4d5f !important;
-  border-left: 1px solid #4d4d5f !important;
-  border-right: 1px solid #292a38 !important;
-  border-bottom: 1px solid #292a38 !important;
+  border-top: 2px solid #4d4d5f !important;
+  border-left: 2px solid #4d4d5f !important;
+  border-right: 2px solid #292a38 !important;
+  border-bottom: 2px solid #292a38 !important;
   box-shadow: -2px -3px 8px 0px #41415a, 5px 4px 6px 0px #060505;
   border-radius: 5pt !important;
   color: aliceblue !important;
@@ -40,7 +219,7 @@ top:300pt    ______200pt   (上下)
   color: honeydew;
   position: absolute;
   transition-duration: 2s;
-  transition-timing-function:linear;
+  transition-timing-function: linear;
 }
 
 

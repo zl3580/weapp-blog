@@ -9,8 +9,19 @@
    <view class="ball-six"  style="bottom:{{bottom}}rpx;left:{{leftSix}}rpx;transform:rotate({{leftSix}}deg)">胖</view>
    <view class="ball-seven"  style="bottom:{{bottom}}rpx;left:{{leftSeven}}rpx;transform:rotate({{leftSeven}}deg)">墩</view>
   </view> -->
-  <view class="container">
-      <canvas type="2d" style="width:100vw;height:100vh;" id="canvas"></canvas>
+  <div class="containerBgcolor1"></div>
+    <div class="containerBgcolor2"></div>
+    <div class="containerBgcolor3"></div>
+    <div class="containerBgcolor4"></div>
+    <div class="containerBgcolor5"></div>
+    <div class="containerBgcolor6"></div>
+    <div class="containerBgcolor7"></div>
+    <div class="containerBgcolor8"></div>
+    <div class="containerBgcolor9"></div>
+    <div class="containerBgcolor10"></div>
+  <view class="canvas-wrap ">
+   
+      <canvas type="2d" style="width:100vw;height:{{height}}px;" id="canvas" class="canvas"></canvas>
   </view>
 
   <view class="entry-button-wrap">
