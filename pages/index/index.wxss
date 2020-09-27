@@ -189,6 +189,7 @@ top:300pt    ______200pt   (上下)
 .entry-button-wrap {
   position: absolute;
   bottom: 100pt;
+  z-index: 200;
 }
 
 .entry-button {

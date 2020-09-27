@@ -7,11 +7,13 @@
     word-wrap: break-word;
     word-break: normal;
     text-align:justify;
+    /* height: 100%; */
 }
 
 .h2w__main {
     margin: 0 40rpx 40rpx 40rpx;
     padding-top: 40rpx;
+    /* height: 100%; */
 }
 
 /**标题**/

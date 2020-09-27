@@ -13,8 +13,8 @@ Page({
         defaultPosition: {
           x: 100,
           y: 0,
-          vx: 6,
-          vy: 6
+          vx: 5,
+          vy: 5
         }
       },
       {
@@ -24,9 +24,9 @@ Page({
         radius: 25,
         defaultPosition: {
           x: 150,
-          y: 0,
-          vx: 6,
-          vy: 6
+          y: -50,
+          vx: 5,
+          vy: 5
         }
       },
       {
@@ -36,7 +36,7 @@ Page({
         radius: 30,
         defaultPosition: {
           x: 50,
-          y: 0,
+          y: -100,
           vx: 4,
           vy: 4
         }
@@ -48,9 +48,9 @@ Page({
         radius: 26,
         defaultPosition: {
           x: 250,
-          y: 0,
-          vx: 4,
-          vy: 4
+          y: -150,
+          vx: 3,
+          vy: 3
         }
       },
       {
@@ -60,7 +60,7 @@ Page({
         radius: 20,
         defaultPosition: {
           x: 350,
-          y: 0,
+          y: -200,
           vx: 2,
           vy: 2
         }
@@ -72,9 +72,9 @@ Page({
         radius: 30,
         defaultPosition: {
           x: 350,
-          y: 0,
-          vx: 2,
-          vy: 2
+          y: -250,
+          vx: 1,
+          vy: 1
         }
       },
       {
@@ -84,9 +84,9 @@ Page({
         radius: 25,
         defaultPosition: {
           x: 380,
-          y: 0,
-          vx: 1,
-          vy: 1
+          y: -300,
+          vx: 2,
+          vy: 2
         }
       },
     ],
@@ -176,10 +176,10 @@ Page({
     
     if( 0 <= gravityY && gravityY < 1 ){
       if ( p.y <= radius ) {
-        p.vy = 2
+        p.vy = 4
        
       }else{
-        p.vy = -2
+        p.vy = -4
       }
       this.data.lists[index].defaultPosition.y = p.y
       this.data.lists[index].defaultPosition.vy = p.vy
@@ -190,9 +190,9 @@ Page({
     }
     if(-1 <= gravityY && gravityY < 0){
       if (p.y >= this.systemHeight - radius) {
-        p.vy = -1
+        p.vy = -5
       }else{
-        p.vy = 1
+        p.vy = 5
       }
       this.data.lists[index].defaultPosition.y = p.y
       this.data.lists[index].defaultPosition.vy = p.vy

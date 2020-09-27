@@ -4,11 +4,11 @@
     <van-loading type="spinner" color="#1989fa" />
   </view>
   <view wx:else>
-    <view class="card-article" wx:for="{{articleData}}" wx:key="item">
-      <view>
+    <view class="card-article" wx:for="{{articleData}}" wx:key="id">
+      <view >
         <view class="article-title">{{item.title}}</view>
-        <view class="article-content" id="{{item.id}}" catchtap="handleContent">
-          <towxml nodes="{{item.content}}"></towxml>
+        <view class="article-content">
+          <towxml nodes="{{item.content}}" data-id="{{item.id}}"></towxml>
         </view>
       </view>
       <view class="action-wrap">

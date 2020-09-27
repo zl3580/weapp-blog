@@ -15,14 +15,7 @@ Page({
     isAll: false
   },
 
-  //查看文章详情
-  handleContent: function (e) {
-    console.log('点击成功')
-    let id = e.currentTarget.id;
-    wx.navigateTo({
-      url: `../article/article?id=${id}`
-    })
-  },
+ 
 
   /**
    * 生命周期函数--监听页面加载
@@ -42,17 +35,47 @@ Page({
         pageNum: 1
       },
       success(res) {
-        console.log('success', res)
-        let data = res.data.data.list.map(item => {
-          return {
-            content: app.towxml(item.content, 'markdown', {
-              theme: 'dark',
-            }),
+        let data = res.data.data.list.map((item) => {
+          // let content=  ( function (data){
+          //  return app.towxml(data.content.slice(0,80), 'markdown', {
+          //     theme: 'dark',
+          //     events:{
+          //         tap:(e)=>{
+          //           console.log('tap',data._id,e);
+          //         //     wx.navigateTo({
+          //         //   url: `../article/article?id=${id}`
+          //         // })
+          //         }
+          //     }
+          //   })
+          // })(item)
+         return  {
             pageview: item.pageview,
             title: item.title,
-            id: item._id
+            id: item._id,
+            content: ( function (data){
+              console.log(222222,data)
+              return app.towxml(data.content.slice(0,80), 'markdown', {
+                 theme: 'dark',
+                 events:{
+                     tap:(function(temp){
+                       console.log('temp',temp)
+                       return (e)=>{
+                       console.log('tap',e);
+                     //     wx.navigateTo({
+                     //   url: `../article/article?id=${id}`
+                     // })
+                     }
+                    })(data),
+                    handle:()=>{
+console.log(1121313213)
+                    }
+                 }
+               })
+             })(item),
           }
         });
+        console.log('data',data)
         _this.setData({
           articleData: data,
           loading: false
@@ -65,6 +88,15 @@ Page({
     })
   },
 
+  //查看详情
+  handleDetails(e){
+    console.log('查看详情',e)
+    const id=e.currentTarget.id;
+       wx.navigateTo({
+         url: `../article/article?id=${id}`
+       })
+
+  },
 
 
   /**
@@ -126,8 +158,9 @@ Page({
       },
       success(res) {
         let data = res.data.data.list.map(item => {
+          let content=item.content.slice(0,80)
           return {
-            content: app.towxml(item.content, 'markdown', {
+            content: app.towxml(content, 'markdown', {
               theme: 'dark',
             }),
             pageview: item.pageview,
